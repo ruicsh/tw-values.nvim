@@ -50,6 +50,7 @@ use({ "MaximilianLloyd/tw-values.nvim" })
     },
     opts = {
         border = "rounded", -- Valid window border style,
+        title = "Tailwind CSS Values", -- Float window title
         show_unknown_classes = true, -- Shows the unknown classes popup
         focus_preview = true, -- Sets the preview as the current window
         copy_register = "", -- The register to copy values to,
@@ -65,12 +66,13 @@ use({ "MaximilianLloyd/tw-values.nvim" })
 
 ## Configuration
 
-Right now the configurtion options are quite minimal.
+Right now the configuration options are quite minimal.
 
 ```lua
 ...
 {
     border = "rounded", -- Valid window border style,
+    title = "Tailwind CSS Values", -- Float window title
     show_unknown_classes = true, -- Shows the unknown classes popup
     focus_preview = false, -- Sets the preview as the current window
     copy_register = "", -- The register to copy values to,

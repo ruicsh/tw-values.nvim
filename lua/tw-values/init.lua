@@ -7,6 +7,7 @@ local M = {}
 function M.defaults()
     local defaults = {
         border = "rounded",
+        title = "Tailwind CSS values",
         show_unknown_classes = true,
         focus_preview = false,
         copy_register = "",
@@ -247,7 +248,7 @@ function OpenFloats(results, unknownclasses)
     end
 
     local formatted_results = Utils.format_to_css(results)
-    local title = "Tailwind CSS values"
+    local title = M.options.title
     local longest = Utils.get_longest(formatted_results, #title)
     local height = #formatted_results
 
@@ -256,7 +257,7 @@ function OpenFloats(results, unknownclasses)
         border = M.options.border,
         width = longest,
         height = height,
-        title = "Tailwind CSS values",
+        title = title,
     })
     -- Focus buf
     -- Open a window below it
